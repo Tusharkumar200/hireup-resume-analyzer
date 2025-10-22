@@ -27,7 +27,7 @@ const Resume = () => {
             const resume = await kv.get(`resume:${id}`);
 
             if(!resume) return;
-
+ 
             const data = JSON.parse(resume);
 
             const resumeBlob = await fs.read(data.resumePath);
